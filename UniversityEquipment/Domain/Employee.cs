@@ -1,6 +1,9 @@
 ﻿namespace UniversityEquipment.Domain;
 
-public class Employee
+public class Employee : User
 {
-    
+    public Employee(string firstName, string lastName) : base(firstName, lastName)
+    {
+        
+    }
 }
