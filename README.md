@@ -47,4 +47,11 @@ Penalty logic is centralized in `RentalService`.
 ## Technologies
 - C#
 - .NET Console App
+
+## Project structure justification
+The project is divided into layers:
+- Domain: contains core entities like User, Equipment, Rental
+- Services: contains business logic (RentalService)
+- Program: contains only the demonstration scenario
+  This separation improves readability, maintainability, and makes the code easier to extend.
 ## final merge step
