@@ -6,7 +6,7 @@ public class Rental
     public Equipment Equipment { get; set; }
     public DateTime RentalDate { get; set; }
     public DateTime DueDate { get; set; }
-    public DateTime ReturnDate { get; set; }
+    public DateTime? ReturnDate { get; set; }
     public decimal Penalty { get; set; }
 
     public Rental(User user, Equipment equipment, int days)
