@@ -37,3 +37,13 @@ Inheritance is used where it matches the domain:
 
 Rental limits are easy to modify because they are defined in user types.
 Penalty logic is centralized in `RentalService`.
+
+## Features
+- Rent equipment
+- Return equipment
+- calculate penalties
+- show reports
+
+## Technologies
+- C#
+- .NET Console App
