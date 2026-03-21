@@ -6,4 +6,7 @@ public class Employee : User
     {
         
     }
+
+    public override int RentalLimit => 5;
+   
 }
