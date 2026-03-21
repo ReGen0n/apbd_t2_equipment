@@ -107,7 +107,37 @@ public class RentalService
         }
     }
 
-    
+    public void MarkEquipmentUnavailable(int equipmentId)
+    {
+        var equipment = _equipment.FirstOrDefault(e => e.Id == equipmentId);
+
+        if (equipment == null)
+        {
+            Console.WriteLine("Equipment not found.");
+            return;
+        }
+
+        equipment.IsAvailable = false;
+        Console.WriteLine($"{equipment.Name} marked as unavailable.");
+    }
+
+    public void ShowActiveRentalsForUser(int userId)
+    {
+        Console.WriteLine("\n=== ACTIVE RENTALS FOR USER ===");
+
+        var rentals = _rentals.Where(r => r.User.Id == userId && r.IsActive).ToList();
+
+        if (!rentals.Any())
+        {
+            Console.WriteLine("No active rentals.");
+            return;
+        }
+
+        foreach (var rental in rentals)
+        {
+            Console.WriteLine($"{rental.User.FirstName} {rental.User.LastName} -> {rental.Equipment.Name}, due {rental.DueDate:d}");
+        }
+    }
 
     public void ShowOverdueRentals()
     {
