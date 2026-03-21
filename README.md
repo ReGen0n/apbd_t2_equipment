@@ -47,3 +47,4 @@ Penalty logic is centralized in `RentalService`.
 ## Technologies
 - C#
 - .NET Console App
+## final merge step
