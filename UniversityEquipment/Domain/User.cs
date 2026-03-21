@@ -14,4 +14,5 @@ public abstract class User
         FirstName = firstName;
         LastName = lastName;
         }
+    public abstract int RentalLimit { get;  }
 }

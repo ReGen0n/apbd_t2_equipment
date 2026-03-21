@@ -6,4 +6,6 @@ public class Student : User
     {
         
     }
+
+    public override int RentalLimit => 2;
 }
